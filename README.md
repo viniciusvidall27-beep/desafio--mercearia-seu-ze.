@@ -55,11 +55,11 @@ Basta abrir `index.html` em qualquer navegador — não há dependências além 
 **LinkedIn:** www.linkedin.com/in/luiz-matheus-395a0942a
 
 
-**Nome:** _[seu nome aqui]_
-**Formação atual:** _[curso e instituição]_
+**Nome:** Daniel Leal
+**Formação atual:** Sistema de Informação
 **Competências técnicas em desenvolvimento:** HTML, CSS, Git, GitHub
-**GitHub:** _[link do perfil]_
-**LinkedIn:** _[link do perfil]_
+**GitHub:** https://github.com/Daniel-de-Souza-Leal
+**LinkedIn:** https://www.linkedin.com/in/daniel-leal-3a33643a9/
 
 **Motivação:** Somos estudantes de Sistemas de informação, com conhecimento prático em HTML, CSS e versionamento com Git e GitHub, adquirido ao longo do curso e em projetos pessoais. Acreditamos que a melhor solução para a Mercearia do Seu Zé não é a mais complexa, mas a mais clara e direta: uma página simples de navegar, que respeita o público mais velho que o Seu Zé já atende e, ao mesmo tempo, é fácil de encontrar pelos novos moradores e universitários do Centro. Nos comprometemos a entregar um código organizado, bem versionado e dentro do prazo, tratando este projeto com a mesma seriedade de um cliente real.
 
