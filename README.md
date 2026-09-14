@@ -31,7 +31,7 @@ Currículo/perfil profissional dos desenvolvedores neste README, para avaliaçã
 - **`<main>`** — apresentação da loja, tabela de produtos/promoções da semana e bloco de localização/horário/contato com mapa incorporado.
 - **`<footer>`** — direitos autorais e links de redes sociais (hipotéticos).
 
-> O mapa e os campos de contato usam dados fictícios de exemplo — troque pelo endereço, telefone e link do WhatsApp reais antes de publicar.
+
 
 ## Como visualizar
 
@@ -39,7 +39,7 @@ Basta abrir `index.html` em qualquer navegador — não há dependências além 
 
 ## Mini-currículo da equipe
 
-> ⚠️ Preencha esta seção com os dados reais da dupla/grupo antes da entrega — é o requisito de validação pedido pelo Seu Zé e pelo Lucas.
+
 
 **Nome:** Vinicius Vidal
 **Formação atual:** Sistemas de Informação UP
