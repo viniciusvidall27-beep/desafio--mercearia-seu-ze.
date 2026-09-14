@@ -15,9 +15,6 @@ Prioritariamente jovens adultos, universitários e novos moradores do Centro e b
 2. Horário de funcionamento durante a semana e no fim de semana.
 3. Contato direto (WhatsApp e telefone fixo) e destaque dos principais produtos/promoções.
 
-**Requisito extra**
-Currículo/perfil profissional dos desenvolvedores neste README, para avaliação de capacidade técnica e comprometimento da equipe (solicitação do Seu Zé e do Lucas).
-
 ## Estrutura do projeto
 
 ```
