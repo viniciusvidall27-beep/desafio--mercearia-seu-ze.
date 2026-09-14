@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercearia do Seu Zé — Centro Histórico de Curitiba</title>
+<meta name="description" content="Mercearia do Seu Zé: mais de 40 anos no Centro Histórico de Curitiba. Produtos coloniais, café moído na hora e atendimento de bairro, a poucos passos do Calçadão da XV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --yellow: #FFD400;
+    --yellow-deep: #FFC400;
+    --blue: #1E6FD9;
+    --blue-deep: #144E9C;
+    --red: #E8491D;
+    --ink: #1A1710;
+    --paper: #FFF8E0;
+    --line: 3px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(var(--yellow-deep) 1.4px, transparent 1.4px);
+    background-size: 18px 18px;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, .display{
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  a{ color: var(--blue-deep); }
+
+  .wrap{
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--yellow);
+    border-bottom: var(--line) solid var(--ink);
+  }
+  .nav{
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand{
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand .dot{
+    width: 12px; height: 12px;
+    background: var(--red);
+    border-radius: 50%;
+    border: 2px solid var(--ink);
+    display: inline-block;
+  }
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    padding: 64px 0 58px;
+    background: var(--blue);
+    border-bottom: var(--line) solid var(--ink);
+    overflow: hidden;
+  }
+  .hero .wrap{ position: relative; }
+  .badge{
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 3px solid var(--ink);
+    transform: rotate(-4deg);
+    margin-bottom: 20px;
+  }
+  .hero h1{
+    font-size: clamp(2.2rem, 6.5vw, 3.6rem);
+    max-width: 13ch;
+    color: #fff;
+    -webkit-text-stroke: 2px var(--ink);
+    paint-order: stroke fill;
+  }
+  .hero p.lede{
+    margin-top: 20px;
+    max-width: 46ch;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #FFF8E0;
+  }
+  .hero .cta-row{
+    margin-top: 30px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn{
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1rem;
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .btn:active{ transform: translate(3px,3px); box-shadow: 2px 2px 0 var(--ink); }
+  .btn.primary{ background: var(--yellow); color: var(--ink); }
+  .btn.ghost{ background: #fff; color: var(--ink); }
+
+  .sun{
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 220px;
+    height: 220px;
+    background: var(--yellow);
+    border-radius: 50%;
+    border: var(--line) solid var(--ink);
+    z-index: 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .btn{ will-change: transform; }
+  }
+
+  /* ---------- Sections ---------- */
+  section{ padding: 56px 0; }
+
+  .panel-label{
+    display: inline-block;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    color: var(--blue-deep);
+    background: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 10px;
+    padding: 4px 14px;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    transform: rotate(-1.5deg);
+  }
+
+  section h2{ font-size: 1.9rem; margin-bottom: 22px; }
+
+  .story-card{
+    background: #fff;
+    border: var(--line) solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 7px 7px 0 var(--ink);
+    padding: 28px;
+  }
+  .story-card p{ max-width: 62ch; color: var(--ink); }
+  .story-card p + p{ margin-top: 14px; }
+  .story-card .quote{
+    margin: 22px 0;
+    padding: 16px 18px;
+    background: var(--yellow);
+    border: 2px dashed var(--ink);
+    border-radius: 14px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--ink);
+  }
+
+  /* Products */
+  .product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+    margin-top: 8px;
+  }
+  .product-card{
+    background: #fff;
+    border: var(--line) solid var(--ink);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .product-card h3{
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+  .product-card .origin{
+    color: #55503F;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .tag{
+    display: inline-block;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    background: var(--red);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+  }
+  .tag.blue{ background: var(--blue); }
+  .caption-note{
+    color: #55503F;
+    font-size: 0.92rem;
+    margin-top: 16px;
+  }
+
+  /* Info / contact */
+  .info-grid{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 640px){
+    .info-grid{ grid-template-columns: 1fr; }
+  }
+  .info-list{ list-style: none; margin: 0; padding: 0; }
+  .info-list li{
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 2px dashed var(--ink);
+  }
+  .info-list li:last-child{ border-bottom: none; }
+  .info-list .label{
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    color: var(--blue-deep);
+    min-width: 100px;
+    flex-shrink: 0;
+  }
+  .info-list .value{ color: var(--ink); font-weight: 600; }
+  .info-list .value span{ display: block; color: #55503F; font-size: 0.92rem; font-weight: 500; }
+
+  .map-frame{
+    border: var(--line) solid var(--ink);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .map-frame iframe{ width: 100%; height: 260px; border: 0; display: block; }
+  .map-link{
+    display: block;
+    text-align: center;
+    padding: 10px 12px;
+    background: var(--yellow);
+    color: var(--ink) !important;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-top: var(--line) solid var(--ink);
+  }
+  .map-link:hover{ background: var(--yellow-deep); }
+
+  /* Footer */
+  footer.site{
+    background: var(--ink);
+    color: var(--paper);
+    padding: 40px 0 28px;
+    border-top: var(--line) solid var(--ink);
+  }
+  footer.site .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  footer.site .brand{ color: var(--yellow); }
+  footer.site .brand .dot{ background: var(--blue); }
+  footer.site p{ color: #C9C0A4; font-size: 0.9rem; margin: 8px 0 0; max-width: 34ch; }
+  .social{ display: flex; gap: 10px; }
+  .social a{
+    color: var(--ink);
+    background: var(--yellow);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 2px solid var(--yellow);
+  }
+  .social a:hover{ background: var(--paper); }
+  .fine{
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid #444;
+    font-size: 0.82rem;
+    color: #857C63;
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="#topo"><span class="dot"></span>Mercearia do Seu Zé</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="topo">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="badge">Desde 1983!</span>
+      <h1>A mercearia mais querida do Centro de Curitiba</h1>
+      <p class="lede">Café moído na hora, produtos coloniais do interior do Paraná e aquele atendimento no olho no olho — agora fácil de achar no Google.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://wa.me/554199990000" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn ghost" href="#onde-estamos">Ver endereço e horários</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia">
+    <div class="wrap">
+      <span class="panel-label">Nossa história</span>
+      <h2>Mais de quatro décadas no mesmo endereço</h2>
+      <div class="story-card">
+        <p>Quando os paralelepípedos do Centro Histórico viam passar um ritmo de vida bem diferente, Seu Zé abriu as portas de ferro da mercearia pela primeira vez. Naquela época, o comércio se fazia no olho no olho, no caderninho de feira e na confiança das conversas diárias — e é assim até hoje.</p>
+        <p>O cheiro de café moído na hora, as prateleiras de madeira nobre e a variedade de produtos coloniais vindos do interior do Paraná fizeram da loja um ponto de encontro dos moradores tradicionais da região.</p>
+        <p class="quote">"Quem quer comprar, vem até a loja." — Seu Zé</p>
+        <p>Com o passar do tempo, a mercearia se tornou um verdadeiro patrimônio afetivo do Centro. São senhoras e senhores que moram há décadas na região — muitos deles desde a época do Alto da XV — que valorizam o atendimento humanizado e conhecem o dono pelo nome. É esse público fiel que mantém as portas abertas até hoje.</p>
+        <p>Nos últimos anos, o Centro de Curitiba também ganhou vida nova: estudantes universitários, jovens profissionais e moradores de apartamentos funcionais passaram a fazer parte do bairro. Para eles, a Mercearia do Seu Zé guarda produtos frescos e locais que vale a pena conhecer — basta atravessar aquelas portas antigas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que-visitar">
+    <div class="wrap">
+      <span class="panel-label">Por que visitar</span>
+      <h2>O que faz da mercearia um lugar especial</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>Tradição de mais de 40 anos</h3>
+          <div class="origin">No mesmo endereço desde 1983, a dois passos do Calçadão da XV de Novembro.</div>
+        </div>
+        <div class="product-card">
+          <h3>Atendimento no olho no olho</h3>
+          <div class="origin">O tipo de atendimento de bairro que conhece o cliente pelo nome — sem pressa e sem complicação.</div>
+        </div>
+        <div class="product-card">
+          <h3>Produtos coloniais de verdade</h3>
+          <div class="origin">Café torrado e moído na hora, erva-mate, queijos e doces vindos direto do interior do Paraná.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos">
+    <div class="wrap">
+      <span class="panel-label">Na loja esta semana</span>
+      <h2>Produtos e promoções</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>Café moído na hora</h3>
+          <div class="origin">Torrefação própria</div>
+          <span class="tag">preferido da casa</span>
+        </div>
+        <div class="product-card">
+          <h3>Erva-mate para chimarrão</h3>
+          <div class="origin">Interior do Paraná</div>
+          <span class="tag">promoção da semana</span>
+        </div>
+        <div class="product-card">
+          <h3>Queijo colonial</h3>
+          <div class="origin">Produtores locais</div>
+          <span class="tag blue">chegada semanal</span>
+        </div>
+        <div class="product-card">
+          <h3>Doce de leite artesanal</h3>
+          <div class="origin">Interior do Paraná</div>
+          <span class="tag blue">favorito da vovó</span>
+        </div>
+        <div class="product-card">
+          <h3>Cachaça artesanal</h3>
+          <div class="origin">Produtores locais</div>
+          <span class="tag">edição limitada</span>
+        </div>
+      </div>
+      <p class="caption-note">Preços e disponibilidade sujeitos a variação conforme a safra e o fornecedor.</p>
+    </div>
+  </section>
+
+  <section id="onde-estamos">
+    <div class="wrap">
+      <span class="panel-label">Onde estamos</span>
+      <h2>Endereço, horários e contato</h2>
+      <div class="info-grid">
+        <ul class="info-list">
+          <li>
+            <span class="label">Endereço</span>
+            <span class="value">Rua XV de Novembro, 428 <span>Esquina com a Rua Dr. Muricy — a 2 minutos a pé do Calçadão, Centro, Curitiba - PR</span></span>
+          </li>
+          <li>
+            <span class="label">Horário</span>
+            <span class="value">Segunda a sexta: 7h às 19h <span>Sábado: 7h às 13h · Domingo: fechado</span></span>
+          </li>
+          <li>
+            <span class="label">Contato</span>
+            <span class="value">WhatsApp (41) 99999-0000 <span>Telefone fixo (41) 3222-0000</span></span>
+          </li>
+        </ul>
+        <div class="map-frame">
+          <iframe
+            title="Localização da Mercearia do Seu Zé no mapa"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-49.2774%2C-25.4315%2C-49.2694%2C-25.4265&layer=mapnik&marker=-25.4290%2C-49.2734"
+            loading="lazy">
+          </iframe>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rua+XV+de+Novembro+428+Centro+Curitiba+PR" target="_blank" rel="noopener">Abrir no Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#topo"><span class="dot"></span>Mercearia do Seu Zé</a>
+      <p>Comércio de bairro no Centro Histórico de Curitiba desde 1983.</p>
+    </div>
+    <div class="social">
+      <a href="#" rel="noopener">Instagram</a>
+      <a href="#" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <div class="wrap fine">
+    &copy; 2026 Mercearia do Seu Zé. Todos os direitos reservados.
+  </div>
+</footer>
+
+</body>
+</html>
