@@ -41,13 +41,27 @@ Basta abrir `index.html` em qualquer navegador — não há dependências além 
 
 > ⚠️ Preencha esta seção com os dados reais da dupla/grupo antes da entrega — é o requisito de validação pedido pelo Seu Zé e pelo Lucas.
 
+**Nome:** Vinicius Vidal
+**Formação atual:** Sistemas de Informação UP
+**Competências técnicas em desenvolvimento:** HTML, CSS, Git, GitHub
+**GitHub:** https://github.com/viniciusvidall27-beep
+**LinkedIn:** https://www.linkedin.com/in/viniciusvidal-dev
+
+**Motivação:** Somos estudantes de [seu curso], com conhecimento prático em HTML, CSS e versionamento com Git e GitHub, adquirido ao longo do curso e em projetos pessoais. Acreditamos que a melhor solução para a Mercearia do Seu Zé não é a mais complexa, mas a mais clara e direta: uma página simples de navegar, que respeita o público mais velho que o Seu Zé já atende e, ao mesmo tempo, é fácil de encontrar pelos novos moradores e universitários do Centro. Nos comprometemos a entregar um código organizado, bem versionado e dentro do prazo, tratando este projeto com a mesma seriedade de um cliente real.
+
 **Nome:** _[seu nome aqui]_
 **Formação atual:** _[curso e instituição]_
 **Competências técnicas em desenvolvimento:** HTML, CSS, Git, GitHub
 **GitHub:** _[link do perfil]_
 **LinkedIn:** _[link do perfil]_
 
-**Motivação:** _[breve declaração explicando por que a dupla/grupo está qualificada para entregar a melhor solução para a Mercearia do Seu Zé]_
+
+**Nome:** _[seu nome aqui]_
+**Formação atual:** _[curso e instituição]_
+**Competências técnicas em desenvolvimento:** HTML, CSS, Git, GitHub
+**GitHub:** _[link do perfil]_
+**LinkedIn:** _[link do perfil]_
+
 
 ---
 
